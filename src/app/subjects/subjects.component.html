@@ -1,0 +1,25 @@
+<mat-card *ngIf="showSubjects" class="parent-card" fxLayout="column" fxLayoutAlign="center center">
+    <mat-card-title class="parent-card-title">
+        Subjects
+    </mat-card-title>
+    <mat-card-content>
+        <section fxLayout="column" fxLayoutAlign="center center">
+            <div>
+                <button type="button" class="btn btn-primary">
+                    <i class="fa fa-plus"></i>
+                    &nbsp; Add Subject
+                </button>
+            </div>
+            <form>
+                <div *ngFor="let subject of subjects">
+                    <app-tile [tileSubject]="subject" [tileName]="subject.subjectName"
+                        (clickedOnSubjectEvent)="clickedOnSubject($event)"></app-tile>
+                </div>
+            </form>
+        </section>
+    </mat-card-content>
+</mat-card>
+
+<div *ngIf="showTopics">
+    <app-topics [topics]="topics"></app-topics>
+</div>

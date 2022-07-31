@@ -1,0 +1,9 @@
+<div>
+    <mat-card class="mat-card" fxLayout="row">
+        <mat-checkbox disabled [checked]="checkboxToggle" class="mat-checkbox"></mat-checkbox>
+        <mat-card-content (click)="clickedOnSubject()" class="mat-card-content">
+            <span>&nbsp; {{tileName}}</span>
+        </mat-card-content>
+    </mat-card>
+    <br>
+</div>

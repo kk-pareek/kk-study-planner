@@ -1,0 +1,31 @@
+<mat-card *ngIf="showTopics" class="parent-card" fxLayout="column" fxLayoutAlign="center center">
+    <mat-card-title class="parent-card-title">
+        {{topics[0].subjectName}} > Topics
+    </mat-card-title>
+    <mat-card-content>
+        <section fxLayout="column" fxLayoutAlign="center center">
+            <div>
+                <button type="button" class="btn btn-primary">
+                    <i class="fa fa-plus"></i>
+                    &nbsp; Add Topic
+                </button>
+            </div>
+            <form>
+                <div *ngFor="let topic of topics">
+                    <app-tile [tileName]="topic.topicName" [tileSubject]="topic"
+                        (clickedOnSubjectEvent)="clickedOnTopic($event)"></app-tile>
+                </div>
+            </form>
+            <div>
+                <button (click)="backToHome()" class="btn btn-primary">
+                    <i class="fa fa-home"></i>
+                    &nbsp; Back to home!
+                </button>
+            </div>
+        </section>
+    </mat-card-content>
+</mat-card>
+
+<div *ngIf="showSubtopics">
+    <app-subtopics [subtopics]="subtopics"></app-subtopics>
+</div>

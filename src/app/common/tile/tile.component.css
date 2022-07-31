@@ -1,0 +1,16 @@
+
+
+span, span:hover {
+    font-size: 17px;
+    font-weight: 400;
+}
+
+.mat-card-content {
+    margin-top: 1px;
+    cursor: pointer;
+}
+
+.mat-checkbox[disabled]{
+    font-size: 17px;
+    font-weight: 400;
+}
